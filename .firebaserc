@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "share-my-trip-ca2c4": {
+      "hosting": {
+        "share-my-trip": [
+          "share-my-trip-ca2c4"
+        ]
+      }
+    }
+  }
+}
