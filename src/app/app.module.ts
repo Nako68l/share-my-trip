@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
 import {AngularFirestoreModule} from "@angular/fire/firestore";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TripEditorModule} from "./trip-editor/trip-editor.module";
 
 @NgModule({
   declarations: [
@@ -16,6 +18,9 @@ import {AngularFirestoreModule} from "@angular/fire/firestore";
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    BrowserAnimationsModule,
+
+    TripEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
