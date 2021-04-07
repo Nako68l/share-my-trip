@@ -2,3 +2,19 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+#trip-granularity {
+  .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    padding: 0 70px;
+  }
+
+  .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 28px;
+  }
+}
+

@@ -1,8 +1,15 @@
-<form class="example-form">
+<form class="example-form" [formGroup]="editorForm">
   <div class="mat-h1">
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Title</mat-label>
-      <input matInput placeholder="Trip to ...">
+      <input formControlName="title" matInput placeholder="Trip to ..." aria-label="Trip Title">
     </mat-form-field>
+  </div>
+
+  <div class="grid-center">
+    <mat-button-toggle-group id="trip-granularity" formControlName="tripGranularity" aria-label="Trip Granularity">
+      <mat-button-toggle [value]="tripGranularity.BY_DAY">By Day</mat-button-toggle>
+      <mat-button-toggle [value]="tripGranularity.WHOLE">Whole</mat-button-toggle>
+    </mat-button-toggle-group>
   </div>
 </form>

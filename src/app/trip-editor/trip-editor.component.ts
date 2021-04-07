@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {FormBuilder} from "@angular/forms";
+import {TripGranularity} from '../enums/trip-granularity.enum';
 
 @Component({
   selector: 'app-trip-editor',
   templateUrl: './trip-editor.component.html',
-  styleUrls: ['./trip-editor.component.scss']
+  styleUrls: ['./trip-editor.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TripEditorComponent implements OnInit {
+export class TripEditorComponent{
+  tripGranularity = TripGranularity;
 
-  constructor() { }
+  editorForm = this.fb.group({
+    title: [''],
+    tripGranularity: [TripGranularity.BY_DAY]
+  });
 
-  ngOnInit(): void {
-  }
-
+  constructor(private fb: FormBuilder) { }
 }
