@@ -4,6 +4,8 @@ import {TripEditorComponent} from './trip-editor.component';
 import {MatInputModule} from '@angular/material/input';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -12,7 +14,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     CommonModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule
   ]
 })
 export class TripEditorModule {

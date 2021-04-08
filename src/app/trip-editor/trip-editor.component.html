@@ -7,9 +7,36 @@
   </div>
 
   <div class="grid-center">
-    <mat-button-toggle-group id="trip-granularity" formControlName="tripGranularity" aria-label="Trip Granularity">
-      <mat-button-toggle [value]="tripGranularity.BY_DAY">By Day</mat-button-toggle>
+    <mat-button-toggle-group id="trip-granularity" formControlName="granularity" aria-label="Trip Granularity">
       <mat-button-toggle [value]="tripGranularity.WHOLE">Whole</mat-button-toggle>
+      <mat-button-toggle [value]="tripGranularity.BY_DAY">By Day</mat-button-toggle>
     </mat-button-toggle-group>
+  </div>
+
+  <div formArrayName="days" class="trip-details-builder">
+    <div *ngFor="let day of daysControls; let i=index">
+      <ng-container [formGroupName]="i">
+        <div *ngIf="isByDayTrip" class="mat-h4">
+          Day {{ i }}:
+        </div>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Description:</mat-label>
+          <textarea formControlName="description" matInput
+                    placeholder="On the one sunny Saturday morning..." aria-label="Trip Description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Google Maps link</mat-label>
+          <input formControlName="glink" matInput placeholder="https://www.google.com/maps/place/Krakow"
+                 aria-label="Link to the google maps route of the trip">
+        </mat-form-field>
+      </ng-container>
+    </div>
+
+    <button *ngIf="isByDayTrip" mat-button (click)="addDay()" color="primary" aria-label="Add Day">
+      <mat-icon>add</mat-icon>
+      Add Day
+    </button>
   </div>
 </form>
