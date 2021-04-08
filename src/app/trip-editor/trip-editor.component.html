@@ -2,7 +2,7 @@
   <div class="mat-h1">
     <mat-form-field class="example-full-width">
       <mat-label>Title</mat-label>
-      <input formControlName="title" matInput placeholder="Trip to ..." aria-label="Trip Title">
+      <input formControlName="title" matInput type="text" placeholder="Trip to ..." aria-label="Trip Title">
     </mat-form-field>
   </div>
 
@@ -28,7 +28,7 @@
 
         <mat-form-field>
           <mat-label>Google Maps link</mat-label>
-          <input formControlName="glink" matInput placeholder="https://www.google.com/maps/place/Krakow"
+          <input formControlName="glink" matInput type="url" placeholder="https://www.google.com/maps/place/Krakow"
                  aria-label="Link to the google maps route of the trip">
         </mat-form-field>
       </ng-container>
