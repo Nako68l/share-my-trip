@@ -17,7 +17,7 @@
     <div *ngFor="let day of daysControls; let i=index">
       <ng-container [formGroupName]="i">
         <div *ngIf="isByDayTrip" class="mat-h4">
-          Day {{ i }}:
+          Day {{ i + 1}}:
         </div>
 
         <mat-form-field class="example-full-width">
